@@ -1,16 +1,16 @@
 import React from "react";
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import './../styles/App.css';
 import Home from "./Home";
 import About from "./About";
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 
 
 const App = () => {
   return (
     <BrowserRouter>
       <div>
-        <nav >
-          <Link to="/">Home</Link>
+        <nav>
+          <Link to="/">Home</Link> | 
           <Link to="/about">About</Link>
         </nav>
 
@@ -19,10 +19,9 @@ const App = () => {
           <Route path="/about" element={<About />} />
         </Routes>
 
-        {/* Do not remove the main div */}
       </div>
     </BrowserRouter>
   )
 }
 
-export default App
+export default App;
